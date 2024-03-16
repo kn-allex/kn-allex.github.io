@@ -4,11 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Static Cocktail Recipe for Bring! Import</title>
-    <link rel="stylesheet" href="simon-theme.css">
+    <link rel="stylesheet" href="styles.css">
     <script async src="//platform.getbring.com/widgets/import.js"></script>
+    <style>
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 220px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -110px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
-    <!-- Recipe Schema Markup for Bring! Import -->
     <div itemscope itemtype="http://schema.org/Recipe" style="display: none;">
         <h1 itemprop="name">Mojito</h1>
         <img itemprop="image" src="your-image-url.jpg" alt="Mojito"/>
@@ -19,14 +47,14 @@
         <div itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation">
             <span itemprop="calories">150 calories</span>
         </div>
-        <ul itemprop="recipeIngredient">
-            <li>2 teaspoons sugar</li>
-            <li>6 leaves fresh mint</li>
-            <li>Soda water</li>
-            <li>1 lime, halved</li>
-            <li>2 ounces white rum</li>
-            <li>Ice cubes</li>
-        </ul>
+        <div itemprop="recipeIngredient">
+            <div class="tooltip">2 teaspoons sugar<span class="tooltiptext">Sugar</span></div>
+            <div class="tooltip">6 leaves fresh mint<span class="tooltiptext">Mint Leaves</span></div>
+            <div class="tooltip">Soda water<span class="tooltiptext">Soda Water</span></div>
+            <div class="tooltip">1 lime, halved<span class="tooltiptext">Lime</span></div>
+            <div class="tooltip">2 ounces white rum<span class="tooltiptext">White Rum</span></div>
+            <div class="tooltip">Ice cubes<span class="tooltiptext">Ice Cubes</span></div>
+        </div>
         <div itemprop="recipeInstructions">
             <p>Muddle the sugar, mint leaves, and a little club soda in a glass.</p>
             <p>Squeeze the juice from both halves of the lime into the glass, dropping one half into the glass.</p>
@@ -35,7 +63,6 @@
         </div>
     </div>
 
-    <!-- Bring! Import Button -->
     <div data-bring-import data-bring-language="en" data-bring-theme="light" style="display: none;">
         <a href="https://www.getbring.com">Bring! Shopping List App for iPhone and Android</a>
     </div>
