@@ -4,40 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cocktail Recipe</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        .container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: #0078D4;
-        }
-
-        p, label {
-            color: #666;
-        }
-
-        .recipe, .import-section {
-            background-color: #e7f1ff;
-            padding: 15px;
-            border-left: 5px solid #0078D4;
-            margin-top: 20px;
-        }
-
-        input[type="file"] {
-            margin-top: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="/modern-theme.css">
+    <script async src="//platform.getbring.com/widgets/import.js"></script>
 </head>
 <body>
     <div class="container">
@@ -45,59 +13,33 @@
         <p>Enjoy a refreshing Mojito with this easy-to-follow recipe!</p>
         
         <div class="recipe">
-            <!-- Recipe content here -->
+            <h2>Ingredients:</h2>
+            <ul>
+                <li>2 teaspoons sugar</li>
+                <li>6 leaves fresh mint</li>
+                <li>Soda water</li>
+                <li>1 lime, halved</li>
+                <li>2 ounces white rum</li>
+                <li>Ice cubes</li>
+            </ul>
+
+            <h2>Instructions:</h2>
+            <ol>
+                <li>Muddle the sugar, mint leaves, and a little club soda in a glass.</li>
+                <li>Squeeze the juice from both halves of the lime into the glass, dropping one half into the glass.</li>
+                <li>Add the rum, stir, and fill the glass with ice cubes.</li>
+                <li>Top off with soda water, garnish with the remaining lime half, and enjoy!</li>
+            </ol>
         </div>
 
-        <!-- Import Section -->
-        <div class="import-section">
-            <label for="file-import">Import your cocktail recipe:</label>
-            <input type="file" id="file-import" accept=".json">
-            <button onclick="importData()">Import</button>
+        <!-- Bring! Widget Integration -->
+        <div data-bring-import data-bring-language="en" style="display:none">
+            <a href="https://www.getbring.com">Bring! Shopping List App for iPhone and Android</a>
         </div>
     </div>
 
-    <script>
-        function importData() {
-            const fileInput = document.getElementById('file-import');
-            if (fileInput.files.length > 0) {
-                const reader = new FileReader();
-
-                reader.onload = function(event) {
-                    try {
-                        const data = JSON.parse(event.target.result);
-                        // Now you have your data, you can do what you need with it
-                        // For example, update the recipe on the page
-                        updateRecipe(data);
-                    } catch (e) {
-                        alert('Error processing imported data');
-                        console.error(e);
-                    }
-                };
-
-                reader.readAsText(fileInput.files[0]);
-            }
-        }
-
-        function updateRecipe(data) {
-            // Assuming 'data' is an object with the expected structure
-            // Update the recipe details on the page
-            const recipeDiv = document.querySelector('.recipe');
-            if (data.name && data.ingredients && data.instructions) {
-                recipeDiv.innerHTML = `
-                    <h2>Ingredients:</h2>
-                    <ul>
-                        ${data.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
-                    </ul>
-
-                    <h2>Instructions:</h2>
-                    <ol>
-                        ${data.instructions.map(step => `<li>${step}</li>`).join('')}
-                    </ol>
-                `;
-            } else {
-                recipeDiv.textContent = 'No recipe data found in imported file';
-            }
-        }
-    </script>
+    <footer>
+        <p>&copy; 2024 Running Cocktail Planner</p>
+    </footer>
 </body>
 </html>
