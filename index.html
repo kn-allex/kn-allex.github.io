@@ -9,32 +9,35 @@
 </head>
 <body>
     <div class="container">
-        <h1>Mojito Cocktail Recipe</h1>
-        <p>Enjoy a refreshing Mojito with this easy-to-follow recipe!</p>
-        
-        <div class="recipe">
-            <h2>Ingredients:</h2>
-            <ul>
-                <li>2 teaspoons sugar</li>
-                <li>6 leaves fresh mint</li>
-                <li>Soda water</li>
-                <li>1 lime, halved</li>
-                <li>2 ounces white rum</li>
-                <li>Ice cubes</li>
-            </ul>
+        <!-- Recipe Schema Markup -->
+        <div itemscope itemtype="http://schema.org/Recipe">
+            <h1 itemprop="name">Mojito Cocktail Recipe</h1>
+            <p>Enjoy a refreshing Mojito with this easy-to-follow recipe!</p>
+            
+            <div class="recipe">
+                <h2>Ingredients:</h2>
+                <ul>
+                    <li itemprop="recipeIngredient">2 teaspoons sugar</li>
+                    <li itemprop="recipeIngredient">6 leaves fresh mint</li>
+                    <li itemprop="recipeIngredient">Soda water</li>
+                    <li itemprop="recipeIngredient">1 lime, halved</li>
+                    <li itemprop="recipeIngredient">2 ounces white rum</li>
+                    <li itemprop="recipeIngredient">Ice cubes</li>
+                </ul>
 
-            <h2>Instructions:</h2>
-            <ol>
-                <li>Muddle the sugar, mint leaves, and a little club soda in a glass.</li>
-                <li>Squeeze the juice from both halves of the lime into the glass, dropping one half into the glass.</li>
-                <li>Add the rum, stir, and fill the glass with ice cubes.</li>
-                <li>Top off with soda water, garnish with the remaining lime half, and enjoy!</li>
-            </ol>
-        </div>
+                <h2>Instructions:</h2>
+                <ol itemprop="recipeInstructions">
+                    <li>Muddle the sugar, mint leaves, and a little club soda in a glass.</li>
+                    <li>Squeeze the juice from both halves of the lime into the glass, dropping one half into the glass.</li>
+                    <li>Add the rum, stir, and fill the glass with ice cubes.</li>
+                    <li>Top off with soda water, garnish with the remaining lime half, and enjoy!</li>
+                </ol>
+            </div>
 
-        <!-- Bring! Widget Integration -->
-        <div data-bring-import data-bring-language="en" style="display:none">
-            <a href="https://www.getbring.com">Bring! Shopping List App for iPhone and Android</a>
+            <!-- Bring! Widget Integration -->
+            <div data-bring-import data-bring-language="en" style="display:none">
+                <a href="https://www.getbring.com">Bring! Shopping List App for iPhone and Android</a>
+            </div>
         </div>
     </div>
 
