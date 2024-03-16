@@ -1,0 +1,468 @@
+/* ... Other global styles ... */
+body {
+  font-family: 'Poppins', fallback-font, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+  text-align: center;
+  background: url('Files/Orange Drink Glass.jpg') no-repeat center;
+  background-size: cover;
+  background-position: center 20%;
+  flex-wrap: wrap;
+  align-content: space-around;
+  align-items: stretch;
+  padding: 50px;
+}
+.wrapper_cocktail_selection{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background: url('Files/Clear\ drinking.jpg') no-repeat center;
+  background-size: cover;
+  background-position: center 20%;
+  flex-wrap: wrap;
+  padding: 50px;
+  align-content: space-around;
+  align-items: stretch;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.logo {
+  position: relative; /* Relative positioning for logo centering */
+  z-index: 10; /* Ensure it's above the background */
+  color: #F7F6F1;
+}
+
+.nav-left, .nav-right {
+  font-size: 1rem; /* Adjust font size accordingly */
+  font-weight: bold;
+  color: #F7F6F1; /* Or any color that matches the design */
+  text-decoration: none;
+}
+
+.main-title {
+  margin: 0;
+  padding: 0;
+  font-size: 3rem; /* Adjust size as needed */
+  color: #F7F6F1;
+  margin-top: 2rem; /* Space between the title and the button */
+  padding-top: 1rem; /* Space between the title and the button */
+}
+
+.recipe_title {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  align-items: left;
+  font-size: 1.5rem; /* Adjust size as needed */
+  color: #F7F6F1;
+}
+
+.recipe_locations_members {
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  text-align: left;
+  align-items: left;
+  font-size: 1rem; /* Adjust size as needed */
+  color: #F7F6F1;
+  padding-top: 1rem; /* Space between the title and the button */
+}
+.white_font {
+  color: #F7F6F1;
+}
+
+.cta-button {
+  background: #FF6A7E; /* Button background color */
+  color: #FFF;
+  padding: 1.5rem 4rem;
+  border: none;
+  border-radius: 20px; /* Rounded corners for the button */
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 4rem; /* Space between title and button */
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Logo text */
+nav.top-nav .logo {
+  font-size: 2.5rem; /* Adjust the logo size as needed */
+  font-weight: bold;
+}
+
+
+/* Main form container */
+div.form-container {
+  background-color: rgba(255, 106, 126, 1); /* Red background with opacity */
+  border-radius: 25px; /* Rounded corners */
+  padding: 1rem;
+  margin: 3rem;
+  width: auto;
+  max-width: 300px; /* Maximum width of the form container */
+}
+
+/* Form title */
+div.form-container h1 {
+  color: #FFFFFF; /* For the text color */
+  margin-bottom: 1.5rem;
+}
+
+/* Form structure */
+form.planning-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* Form inputs */
+form.planning-form input[type='number'],
+form.planning-form input[type='time'] {
+  width: 80%;
+  padding: 0.5rem;
+  border: 1px solid #FEC5CB; /* Light pink border */
+  border-radius: 5px;
+  font-size: 1rem;    
+}
+
+/* Form labels */
+form.planning-form label {
+  color: #FFE8EB; /* For the text color */
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+/* Submit button */
+form.planning-form input[type='submit'] {
+  background-color: #FEC5CB; /* Button color */
+  color: #FFF5F6;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 1px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 100%;
+  height: 60px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #FFFFFF; /* For the text color */
+}
+
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #CCCCCC; /* Placeholder color for the header */
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: url('Files/Orange Drink Glass.jpg') no-repeat center;
+  background-size: cover;
+  background-position: center 20%;
+  flex-wrap: wrap;
+  align-content: space-around;
+  align-items: stretch;
+  min-height: 100vh;
+}
+
+.cocktail-selection {
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white for readability */
+  padding: 20px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 800px; /* Adjust based on your design */
+  margin: auto;
+}
+
+.cocktail-selection h1, .cocktail-selection h2 {
+  color: #333; /* Dark text for readability */
+}
+
+.location-info {
+  margin-bottom: 20px;
+}
+
+#recipesTable {
+  width: 100%;
+  margin-bottom: 20px;
+  font-weight: bold;
+  background-color: #80AEB7;
+  border-radius: 5px;
+  padding: 20px;
+  opacity: 0.9;
+  color: #EEF8FA;
+  /* Add additional styles for the table */
+}
+
+#ingredientsTable {
+  width: 100%;
+  margin-bottom: 20px;
+  font-weight: bold;
+  background-color: #80AEB7;
+  border-radius: 5px;
+  opacity: 0.9;
+  color: #EEF8FA;
+  /* Add additional styles for the table */
+}
+
+#saveContinue {
+  padding: 10px 20px;
+  background-color: #296974;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 30%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* New variable for cocktail image background */
+:root {
+  --cocktail-bg-image: url('path-to-your-cocktail-image.jpg');
+}
+
+.content-wrapper {
+  /* Remove styles related to flex as we will be using grid */
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* Left space, content, right space */
+  background-image: var(--cocktail-bg-image);
+  background-position: right bottom; /* Positioning the cocktail to the bottom right */
+  background-repeat: no-repeat;
+  background-size: contain; /* To ensure the image fits within the space */
+  /* Keep your existing styles for background-size, min-height, etc. */
+}
+
+.cocktail-selection {
+  /* Adjust the width as per your design */
+  grid-column: 2; /* Place the content in the middle column of the grid */
+  padding: 40px; /* Adjust padding to match your design */
+  background-color: rgba(255, 255, 255, 0.8); /* White with transparency */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  /* Add other styles for margin, max-width as needed */
+}
+
+.table-container {
+  overflow-x: auto; /* For small screens and when table is wider than container */
+}
+
+#recipesTable {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  /* Add additional styles to match your design */
+}
+
+/* Additional styling for table headers and rows to match your design */
+th, td {
+  text-align: left;
+  padding: 12px 15px; /* Adjust padding to match your design */
+}
+
+th {
+  background-color: var(--pastel-blue);
+  color: white;
+  /* Add other styles such as font-weight as needed */
+}
+
+tr:nth-child(even) {
+  background-color: var(--gray); /* Even rows color */
+}
+
+/* Add styles for buttons inside table */
+#show_generate_button {
+  padding: 10px 20px;
+  background-color: var(--pastel-blue);
+  color: #EEF8FA;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Styles for Save and Continue button */
+.saveContinue {
+  /* Style your Save and Continue button */
+  width: 20%;
+  font-size: 1rem;
+  font-weight: bold;
+  align-items: center;
+  padding: 10px 20px;
+  color: #F7F6F1;
+}
+
+#save_button {
+  background-color: #296974;
+  color: #296974;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    border-radius: 10px;
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: #F7F6F1;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 50px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px; /* Maximum width */
+  }
+
+  /* The Close Button */
+  .close {
+    color: #429EAF;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #80AEB7;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  .modal-cocktail-image {
+    width: 50%; /* or any specific size */
+    height: auto; /* maintain aspect ratio */
+    display: block; /* to allow margin auto to work for centering */
+    margin: 0 auto; /* center the image if the modal is wider */
+    border-radius: 5px; /* optional: adds rounded corners to the image */
+  }
+
+  .modal-content {
+    position: relative; /* This ensures that absolute positioning is relative to this container */
+    /* Other styles remain the same */
+  }
+
+  .close {
+    position: absolute; /* Absolute position the close button */
+    top: 10px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    cursor: pointer; /* To show a pointer cursor on hover */
+    /* Other styles remain the same */
+  }
+
+  #downloadCsv {
+    padding: 10px 20px;
+    background-color: #F7F6F1;
+    color: #429EAF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 20px 0;
+    width: 30%;
+  }
+
+  #continueToEveningPlan {
+    padding: 10px 20px;
+    background-color: #296974;
+    color: #F7F6F1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 20px 0;
+    width: 30%;
+  }
+
+  .date_label {
+    color: #F7F6F1;
+    font-weight: bold;
+    width: 100%;
+  }
+
+
+  #eveningPlanTable {
+    width: 60%;
+    margin-bottom: 20px;
+    padding: 10px; /* Add some padding inside the input */
+    margin: 20px auto; /* Top and bottom margin of 20px, auto on the sides to center */
+    font-weight: bold;
+    background-color: rgba(254, 197, 203, 0.8); /* Adjusted for 70% opacity */
+    border-radius: 5px;
+    color: #FFF5F6;
+  }
+
+  .input_date {
+    font-family: 'Poppins', sans-serif; /* Use the same font for consistency */
+    padding: 10px; /* Add some padding inside the input */
+    margin: 20px auto; /* Top and bottom margin of 20px, auto on the sides to center */
+    border-radius: 5px; /* Rounded borders */
+    border: 1px solid #A7C7E7; /* Light blue border */
+    background-color: #F7F7F7; /* Light background color */
+    color: #333; /* Dark text color for contrast */
+    width: 20%; /* Use 100% of parent's width */
+    max-width: 400px; /* Maximum width of the date input */
+    box-sizing: border-box; /* Include padding and border in the width */
+    display: block; /* Change display to block if not already */
+}
+
+#downloadCsv {
+  padding: 10px 20px;
+  background-color: #FFF5F6;
+  color: #FF6A7E;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 20px auto;
+  width: 30%;
+}
+
+#downloadIcs {
+  padding: 10px 20px;
+  background-color: #FF6A7E;
+  color: #FFF5F6;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 20px auto;
+  width: 30%;
+}
