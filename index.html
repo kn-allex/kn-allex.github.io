@@ -3,74 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Static Cocktail Recipe for Bring! Import</title>
-    <link rel="stylesheet" href="simon-theme.css">
+    <title>Ingredients for Running Cocktail</title>
+    <link rel="stylesheet" href="/simon-theme.css">
     <script async src="//platform.getbring.com/widgets/import.js"></script>
-    <style>
-        .tooltip {
-            position: relative;
-            display: inline-block;
-            cursor: pointer;
-        }
-
-        .tooltip .tooltiptext {
-            visibility: hidden;
-            width: 220px;
-            background-color: black;
-            color: #fff;
-            text-align: center;
-            border-radius: 6px;
-            padding: 5px;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%;
-            left: 50%;
-            margin-left: -110px;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .tooltip:hover .tooltiptext {
-            visibility: visible;
-            opacity: 1;
-        }
-    </style>
 </head>
-<body>
-    <div itemscope itemtype="http://schema.org/Recipe" style="display: none;">
-        <h1 itemprop="name">Mojito</h1>
-        <img itemprop="image" src="your-image-url.jpg" alt="Mojito"/>
-        <span itemprop="author">John Doe</span>
-        <span itemprop="recipeYield">1 serving</span>
-        <span itemprop="prepTime">PT5M</span>
-        <span itemprop="totalTime">PT10M</span>
-        <div itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation">
-            <span itemprop="calories">150 calories</span>
-        </div>
-        <div itemprop="recipeIngredient">
-            <div class="tooltip">2 teaspoons sugar<span class="tooltiptext">Sugar</span></div>
-            <div class="tooltip">6 leaves fresh mint<span class="tooltiptext">Mint Leaves</span></div>
-            <div class="tooltip">Soda water<span class="tooltiptext">Soda Water</span></div>
-            <div class="tooltip">1 lime, halved<span class="tooltiptext">Lime</span></div>
-            <div class="tooltip">2 ounces white rum<span class="tooltiptext">White Rum</span></div>
-            <div class="tooltip">Ice cubes<span class="tooltiptext">Ice Cubes</span></div>
-        </div>
-        <div itemprop="recipeInstructions">
-            <p>Muddle the sugar, mint leaves, and a little club soda in a glass.</p>
-            <p>Squeeze the juice from both halves of the lime into the glass, dropping one half into the glass.</p>
-            <p>Add the rum, stir, and fill the glass with ice cubes.</p>
-            <p>Top off with soda water, garnish with the remaining lime half, and enjoy!</p>
-        </div>
+<body class="wrapper_cocktail_selection">
+    <nav class="top-nav">
+        <a href="index.html" class="nav-left">Home</a>
+        <h1 class="logo">DrinkShare</h1>
+        <a href="about.html" class="nav-right">About Us</a>
+    </nav>
+
+    <h1 class="main-title">Ingredients for your Running Cocktail</h1>
+
+    <!-- Ingredients listed for display -->
+    <div class="ingredients-display">
+        <table id="ingredientsTable">
+            <!-- Table headers -->
+            <thead>
+                <tr>
+                    <th>Location</th>
+                    <th>Cocktail</th>
+                    <th>Amount</th>
+                    <th>Ingredients</th>
+                </tr>
+            </thead>
+            <!-- Table body -->
+            <tbody>
+                <!-- Ingredients for location 1 -->
+                <tr>
+                    <td>1</td>
+                    <td>Lassi Raita</td>
+                    <td>9</td>
+                    <td>Yoghurt (18 cups), Ice (36-54), Sugar, Lime, Salt</td>
+                </tr>
+                <!-- Ingredients for location 2 -->
+                <tr>
+                    <td>2</td>
+                    <td>Radioactive Long Island Iced Tea</td>
+                    <td>9</td>
+                    <td>Rum (9 oz), Vodka (9 oz), Tequila (9 oz), Gin (9 oz), Triple sec (9 oz), Chambord raspberry liqueur (9 oz), Midori melon liqueur (9 oz), Malibu rum (9 oz)</td>
+                </tr>
+                <!-- Ingredients for location 3 -->
+                <tr>
+                    <td>3</td>
+                    <td>Honey Bee</td>
+                    <td>9</td>
+                    <td>White Rum (54 cl), Honey (18 cl), Lemon Juice (18 cl)</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
-    <div data-bring-import data-bring-language="en" data-bring-theme="light" style="display: none;">
+    <!-- Schema.org Recipe Markup for Bring! Import (Hidden for display, used for data parsing) -->
+    <div itemscope itemtype="http://schema.org/Recipe" style="display:none;">
+        <h1 itemprop="name">Ingredients for Running Cocktail</h1>
+        <!-- Ingredients for Lassi Raita -->
+        <span itemprop="recipeIngredient">Yoghurt (18 cups)</span>
+        <span itemprop="recipeIngredient">Ice (36-54 cubes)</span>
+        <span itemprop="recipeIngredient">Sugar</span>
+        <span itemprop="recipeIngredient">Lime</span>
+        <span itemprop="recipeIngredient">Salt</span>
+        <!-- Ingredients for Radioactive Long Island Iced Tea -->
+        <span itemprop="recipeIngredient">Rum (9 oz)</span>
+        <span itemprop="recipeIngredient">Vodka (9 oz)</span>
+        <!-- ... more ingredients for other cocktails ... -->
+        <!-- Ingredients for Honey Bee -->
+        <span itemprop="recipeIngredient">White Rum (54 cl)</span>
+        <span itemprop="recipeIngredient">Honey (18 cl)</span>
+        <span itemprop="recipeIngredient">Lemon Juice (18 cl)</span>
+    </div>
+
+    <!-- Bring! Import Button -->
+    <div data-bring-import data-bring-language="en" data-bring-theme="light" style="display:none;">
         <a href="https://www.getbring.com">Bring! Shopping List App for iPhone and Android</a>
     </div>
 
-    <h1>Welcome to the Running Cocktail Planner</h1>
-    <p>Here's your Mojito cocktail recipe, ready to be imported into Bring!</p>
-    <!-- ... Your other HTML content ... -->
-
+    <button id="continueToEveningPlan">Continue to evening plan</button>
+    
     <footer>
         <p>&copy; 2024 Running Cocktail Planner</p>
     </footer>
