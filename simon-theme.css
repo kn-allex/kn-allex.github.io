@@ -22,7 +22,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   min-height: 100vh;
-  background: url('Clear drinking.JPG') no-repeat center;
+  background: url('Clear%20drinking.jpg') no-repeat center;
   background-size: cover;
   background-position: center 20%;
   flex-wrap: wrap;
